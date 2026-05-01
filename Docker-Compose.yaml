@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: socialmediaApp
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
